@@ -1,5 +1,7 @@
 package blades;
 
+import static Tools.Functions.outPut;
+
 public class AttackBlade extends Blade{
     // Attributes
     private int attackPower;
@@ -20,8 +22,8 @@ public class AttackBlade extends Blade{
     // Methods
     @Override
     void showBladeData() {
-        System.out.println("Id  nombre  color  tipo  VelocidadGiro  poderTotal");
-        System.out.printf("%2s %2s %2s %2s %2d %2d",id,name, color,type,SpeedSpin,totalPower);
+        outPut.println("Id  nombre  color  tipo  VelocidadGiro  poderTotal");
+        outPut.printf("%2s %2s %2s %2s %2d %2d",id,name, color,type,SpeedSpin,totalPower);
     }
 
     @Override
@@ -33,7 +35,12 @@ public class AttackBlade extends Blade{
     }
 
     @Override
-    public void attackblade(Blade obj) {
+    public void attackToBlade(Blade obj) {
+        if (obj instanceof AttackBlade) {
+            System.out.println("No podemos luchar entre nosotros. Somos el mismo tipo de blade.");
+        } else {
+            outPut.println("Comienza el ataque!");
 
+        }
     }
 }

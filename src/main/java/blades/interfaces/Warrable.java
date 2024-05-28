@@ -1,6 +1,6 @@
 package blades.interfaces;
 
-import blades.interfaces.Blade;
+import blades.Blade;
 
 public interface Warrable {
     public void throwBlade (int speed);

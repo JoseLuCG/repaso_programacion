@@ -1,2 +1,4 @@
-package blades;public class AttackBlade {
+package blades;
+
+public class AttackBlade {
 }
